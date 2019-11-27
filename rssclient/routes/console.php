@@ -31,7 +31,6 @@ Artisan::command('inspire', function () {
  */
 Artisan::command('rss:load {url}', function ($url) {
     try {
-        
         // message of execution
         $this->comment("Executing the loading of ". $url);
         
@@ -65,9 +64,8 @@ Artisan::command('rss:load {url}', function ($url) {
             $rssitem->save();
         }
         $this->comment("Command finalized successfully!!");
-    } catch (\Throwable $th) {
-        //throw $th;
-        $this->comment("Command not finalized, check the url!!");
+    } catch (\Exception $e) {
+        $this->comment("Command not finalized. ". $e->getMessage());
     }
     
 })->describe('Get the content from a RSS feed and store in a table');
