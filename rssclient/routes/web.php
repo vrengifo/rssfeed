@@ -11,6 +11,14 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', 'RSSItemController@index');
+
+Route::get('/rss', 'RSSItemController@index');
+
+//Route::resource('items', 'RSSItemController');
