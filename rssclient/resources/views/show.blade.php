@@ -1,15 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+    
     <a href="/" class="btn btn-secondary mt-2">Go Back</a>
-    <h1>{{ $todo->title }}</h1>
-    <div class="badge badge-danger">{{ $todo->due }}</div>
-    <hr>
-    <p>{{ $todo->content }}</p>
-    <form method="post" action="/todo/{{ $todo->id }}">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-danger mt-2 float-right">Delete</button>
-    </form>
-    <a href="/todo/{{ $todo->id }}/edit" class="btn btn-primary mt-2">Edit</a>
+    <div class="card m-2">
+        <h2><a href="rss/{{ $item->id }}">{{ $item->title }}</a></h2>
+        <h3>Publicated by <span>{{ $item->channel }}</span> at <span>{{ $item->pub_date }}</span></h3>
+        <p>{{ $item->description }}</p>
+        <p>{{ $item->xml }}</p>
+    </div>
+    <a href="/" class="btn btn-secondary mt-2">Go Back</a>
+
 @endsection

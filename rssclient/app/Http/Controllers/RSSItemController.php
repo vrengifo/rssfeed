@@ -58,7 +58,17 @@ class RSSItemController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = Rssitem::find($id);
+
+        /*
+        if($item) {
+            $this->addRssitemRead($id);
+
+            print_r(session('rssitemsread'));
+        }
+        */
+
+        return view('show')->with('item', $item);
     }
 
     /**

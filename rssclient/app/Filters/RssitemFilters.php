@@ -39,6 +39,8 @@ class RssitemFilters extends QueryFilters
      */
     public function unread_only($value = null) {
         // filtering few examples
+        // the idea is collect the data from a session variable 
+        // adding every item when shows the full data
         return $this->builder->whereNotIn('id',[1,2,3]);
     }
 

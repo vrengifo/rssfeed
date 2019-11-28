@@ -57,6 +57,7 @@ Artisan::command('rss:load {url}', function ($url) {
             $rssitem->pub_date = $item->pubDate;
             $rssitem->description = $item->description;
             $rssitem->xml = $item->asXML();
+            $rssitem->title = $item->title;
     
             $rssitem->created_at = Carbon::now();
             $rssitem->updated_at = Carbon::now();

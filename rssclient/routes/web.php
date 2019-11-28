@@ -19,6 +19,6 @@ Route::get('/', function () {
 
 Route::get('/', 'RSSItemController@index');
 
-Route::get('/rss', 'RSSItemController@index');
+Route::get('/rss/{id}', 'RSSItemController@show');
 
 //Route::resource('items', 'RSSItemController');

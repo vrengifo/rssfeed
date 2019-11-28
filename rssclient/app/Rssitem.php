@@ -27,7 +27,8 @@ class Rssitem extends Model
                          'link',
                          'pub_date',
                          'description',
-                         'xml'
+                         'xml',
+                         'title'
                         ];
 
 }

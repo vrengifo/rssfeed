@@ -31,3 +31,14 @@ php artisan list
 Use your favorite RSS url to execute: 
 php artisan rss:load https://www.hotukdeals.com/rss/all
 
+Some examples of RSS:
+    https://threatpost.com/feed/
+    https://www.hotukdeals.com/rss/all
+    https://www.cbc.ca/cmlink/rss-world
+    http://www.informationweek.com/rss_simple.asp
+    https://www.infoworld.com/index.rss
+    http://www.computerweekly.com/rss/All-Computer-Weekly-content.xml
+    https://www.techrepublic.com/rssfeeds/articles/
+    https://galido.net/blog/feed/
+    
+    

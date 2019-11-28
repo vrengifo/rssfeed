@@ -7,9 +7,14 @@
       <li class="nav-item">
         <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
       </li>
+      <li class="nav-item {{ Request::is('/?unread_only') ? 'active' : '' }}">
+        <a class="nav-link" href="/?unread_only">Show Unread-Only</a>
+      </li>
+      <!--
       <li class="nav-item {{ Request::is('rss/') ? 'active' : '' }}">
         <a class="nav-link" href="rss/">RSS</a>
       </li>
+      -->
     </ul>
   </div>
 </nav>

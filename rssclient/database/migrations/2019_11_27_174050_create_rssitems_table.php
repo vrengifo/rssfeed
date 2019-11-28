@@ -28,6 +28,7 @@ class CreateRssitemsTable extends Migration
             $table->string('pub_date');
             $table->text('description')->nullable();
             $table->text('xml');
+            $table->string('title')->nullable();
             $table->timestamps();
 
             // indexes
